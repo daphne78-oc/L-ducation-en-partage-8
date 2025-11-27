@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>L’Éducation en Partage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+<!-- MENU FIXE -->
+<header class="header">
+    <h1 class="site-title">L’Éducation en Partage</h1>
+
+    <nav class="menu">
+        <ul>
+            <li class="dropdown">
+                <a href="#">Catégories ▼</a>
+                <div class="dropdown-content">
+                    <a href="#section-articles">Articles</a>
+                    <a href="#section-citations">Citations</a>
+                    <a href="#section-images">Images</a>
+                    <a href="#section-lien">Lien</a>
+                    <a href="#section-apropos">À propos</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<!-- BANDEAU DE PRÉSENTATION -->
+<section class="bandeau">
+    <p>
+        Bienvenue sur <strong>L’Éducation en Partage</strong>, un espace collaboratif dédié à l’apprentissage,
+        au partage d’expériences pédagogiques et à la découverte des multiples façons d’enseigner. 
+        Vous trouverez ici des articles approfondis, des citations inspirantes, des images éducatives, 
+        un quiz interactif et un espace d’échange entre utilisateurs.
+    </p>
+</section>
+
+<!-- ARTICLES -->
+<section id="section-articles" class="section">
+    <h2 class="section-title">Articles pédagogiques</h2>
+
+    <div class="grid">
+
+        <!-- ARTICLE 1 : Differenciation -->
+        <div class="card" onclick="openModal('modal1')">
+            <h3 class="card-title">La différenciation pédagogique</h3>
+        </div>
+
+        <!-- ARTICLE 2 : Pédagogies alternatives -->
+        <div class="card" onclick="openModal('modal2')">
+            <h3 class="card-title">Les pédagogies alternatives</h3>
+        </div>
+
+        <!-- ARTICLE 3 : Didactique -->
+        <div class="card" onclick="openModal('modal3')">
+            <h3 class="card-title">La didactique de l’enseignant</h3>
+        </div>
+
+        <!-- ARTICLE 4 : Pourquoi être professeur -->
+        <div class="card" onclick="openModal('modal4')">
+            <h3 class="card-title">Pourquoi devenir professeur ?</h3>
+        </div>
+
+        <!-- QUIZ -->
+        <div class="card" onclick="openQuizPage()">
+            <h3 class="card-title">Jeu : Quiz pédagogique</h3>
+        </div>
+    </div>
+</section>
+
+<!-- MODAL ARTICLE 1 -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <h2 class="modal-title">La différenciation pédagogique</h2>
+
+        <p>
+            La différenciation pédagogique désigne l’ensemble des pratiques permettant d’adapter 
+            l’enseignement aux besoins hétérogènes des élèves. Dans une même classe, les apprenants diffèrent 
+            par leurs rythmes, leurs motivations, leurs stratégies d’apprentissage et leurs connaissances 
+            antérieures. La différenciation vise donc à offrir à chacun un chemin d’accès personnalisé 
+            aux savoirs, sans renoncer aux objectifs communs fixés par les programmes.  
+            <br><br>
+            Historiquement, la différenciation a émergé comme réponse au constat que l’enseignement frontal, 
+            uniforme et simultané, ne profite pas à tous les élèves. Certains avancent rapidement, d’autres 
+            nécessitent davantage de guidage ou de temps. Les enseignants observent également que certains 
+            élèves réussissent mieux grâce à des supports visuels, tandis que d’autres sont plus réceptifs 
+            aux manipulations, aux explications orales ou au travail collaboratif.  
+            <br><br>
+            Différencier ne signifie pas créer une séquence différente pour chaque élève – ce serait impossible – 
+            mais proposer des variations d’outils, de supports, de modalités de travail ou de niveaux d’étayage. 
+            Par exemple, un même objectif peut être atteint par un atelier de manipulation, une fiche guidée, 
+            un tutorat entre pairs ou une recherche autonome. Le rôle de l’enseignant devient alors celui 
+            d’un chef d’orchestre, capable d’aménager un environnement riche où chacun peut progresser.  
+            <br><br>
+            La différenciation pédagogique repose sur trois piliers : l’observation fine des besoins, la 
+            flexibilité des pratiques et l’évaluation formative. Observer permet d’identifier ce qui freine 
+            ou stimule chaque élève ; flexibiliser revient à offrir des choix d’activités, de supports ou 
+            de stratégies ; évaluer formativement permet d’ajuster les parcours en continu.  
+            <br><br>
+            Enfin, différencier, c’est faire le pari d’une école plus juste, où chaque élève trouve une place 
+            et un rythme lui permettant de progresser. Loin d’être une faiblesse, la diversité devient alors 
+            une richesse pédagogique.
+        </p>
+
+        <button class="like-button" data-id="article1">❤️ Like</button>
+    </div>
+</div>
+
+<!-- MODAL ARTICLE 2 -->
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <h2 class="modal-title">Les pédagogies alternatives</h2>
+
+        <p>
+            Les pédagogies alternatives regroupent un ensemble de méthodes éducatives développées en marge 
+            du modèle scolaire traditionnel. Bien qu’elles diffèrent dans leurs approches, elles partagent 
+            une conviction commune : l’enfant n’est pas un simple récepteur passif de connaissances, mais un 
+            individu actif, capable d’apprendre par exploration, manipulation et coopération.  
+            <br><br>
+            La pédagogie Montessori insiste sur l’autonomie. Maria Montessori considérait que l’enfant se 
+            construit en agissant sur son environnement. Ses salles de classe sont organisées pour encourager 
+            la liberté de choix, la concentration et la responsabilisation. Le matériel auto-correctif permet 
+            aux élèves de s’autoévaluer sans dépendance permanente à l’adulte.  
+            <br><br>
+            La pédagogie Freinet, née dans les années 1920, valorise l’expression, la coopération et 
+            l’apprentissage par projets. L’imprimerie scolaire, les textes libres et les plans de travail sont 
+            autant d’outils pour développer l’esprit critique et la créativité.  
+            <br><br>
+            La pédagogie Steiner-Waldorf, quant à elle, met l’accent sur le rythme, l’imaginaire et le lien 
+            avec la nature. Les activités artistiques, manuelles et corporelles y tiennent une place centrale, 
+            favorisant un développement harmonieux de l’enfant.  
+            <br><br>
+            Toutes ces pédagogies invitent à revoir le rôle de l’enseignant : non plus simple transmetteur, 
+            mais guide, observateur et facilitateur. Bien qu’elles ne remplacent pas nécessairement le système 
+            traditionnel, elles en inspirent de plus en plus d’éléments, comme les ateliers autonomes, la 
+            coopération ou l’évaluation positive.
+        </p>
+
+        <button class="like-button" data-id="article2">❤️ Like</button>
+    </div>
+</div>
+
+<!-- FIN PARTIE 1 -->
+<!-- MODAL ARTICLE 3 -->
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <h2 class="modal-title">La didactique de l’enseignant</h2>
+
+        <p>
+            La didactique est un domaine essentiel qui étudie la manière dont les savoirs sont transmis, 
+            transformés et rendus accessibles aux élèves. Elle analyse non seulement ce que l’enseignant 
+            enseigne, mais aussi comment il le fait, pourquoi il le fait de cette manière, et avec quels effets.
+            <br><br>
+            Être didacticien dans sa classe, c’est comprendre les obstacles auxquels les élèves sont 
+            confrontés lors de l’apprentissage. Certains obstacles sont d’ordre conceptuel, d’autres 
+            d’ordre langagier, culturel ou méthodologique. L’enseignant doit donc anticiper ces difficultés 
+            pour adapter sa manière d’expliquer, de questionner et de guider.
+            <br><br>
+            La didactique repose également sur la notion de « transposition didactique ». Elle consiste à 
+            transformer un savoir savant — complexe, théorique, parfois abstrait — en un savoir scolaire 
+            accessible. Par exemple, enseigner la division à des élèves de primaire nécessite un travail 
+            d’adaptation du concept mathématique pour le rendre manipulable et compréhensible.
+            <br><br>
+            L’enseignant didacticien conçoit des situations d’apprentissage riches : problèmes ouverts, 
+            manipulations, expériences, débats argumentés… Ces situations permettent aux élèves de 
+            s’approprier activement les savoirs plutôt que de les recevoir passivement. La didactique 
+            s’intéresse donc autant aux contenus qu’aux démarches.
+            <br><br>
+            Enfin, la didactique est indissociable de l’évaluation. Évaluer permet non seulement de vérifier 
+            les acquis, mais aussi de comprendre ce qui n’a pas été compris. L’enseignant ajuste alors sa 
+            séance, reformule, propose d’autres supports ou d’autres situations. La didactique est donc un 
+            processus dynamique, centré sur l’apprentissage des élèves avant tout.
+        </p>
+
+        <button class="like-button" data-id="article3">❤️ Like</button>
+    </div>
+</div>
+
+<!-- MODAL ARTICLE 4 -->
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal4')">&times;</span>
+        <h2 class="modal-title">Pourquoi devenir professeur ?</h2>
+
+        <p>
+            Devenir professeur est un choix profondément humain, fondé sur l’envie de transmettre, 
+            d’accompagner et de guider les générations futures. Enseigner, c’est bien plus qu’expliquer 
+            une leçon : c’est créer des rencontres, éveiller des curiosités et participer à la construction 
+            de citoyens éclairés et responsables.
+            <br><br>
+            Le métier exige de nombreuses compétences : pédagogiques, bien sûr, mais aussi relationnelles, 
+            organisationnelles, émotionnelles. Le professeur doit savoir observer ses élèves, comprendre 
+            leurs besoins, créer un climat de classe bienveillant et structurant. Il doit aussi préparer 
+            des séquences, s’adapter, collaborer avec ses collègues, communiquer avec les familles.
+            <br><br>
+            Être professeur, c’est aussi accepter de se remettre en question. Chaque journée est différente, 
+            chaque élève apporte son histoire, ses forces et ses difficultés. C’est ce qui fait la richesse 
+            du métier : rien n’est jamais figé. L’enseignant apprend autant que les élèves.
+            <br><br>
+            Pour beaucoup, enseigner est également un engagement social. L’école est un pilier de la 
+            démocratie : elle garantit l’accès au savoir pour tous, lutte contre les inégalités et permet 
+            à chacun de développer son potentiel. Contribuer à cet objectif donne du sens à la mission 
+            enseignante.
+            <br><br>
+            Enfin, être professeur, c’est partager des moments précieux : les premiers mots déchiffrés, 
+            les réussites inattendues, les progrès silencieux, les regards fiers. Chaque geste éducatif 
+            porte une trace durable dans la vie des élèves.
+        </p>
+
+        <button class="like-button" data-id="article4">❤️ Like</button>
+    </div>
+</div>
+
+<!-- CITATIONS -->
+<section id="section-citations" class="section">
+    <h2 class="section-title">Citations inspirantes</h2>
+
+    <div class="grid">
+
+        <div class="card" onclick="openModal('cit1')">
+            <h3 class="card-title"><i>« L’éducation est l’arme la plus puissante pour changer le monde. »</i></h3>
+        </div>
+
+        <div class="card" onclick="openModal('cit2')">
+            <h3 class="card-title"><i>« Un enfant, un enseignant, un livre et un stylo peuvent changer le monde. »</i></h3>
+        </div>
+
+        <div class="card" onclick="openModal('cit3')">
+            <h3 class="card-title"><i>« Apprendre, c’est déposer de l’or dans la banque de son esprit. »</i></h3>
+        </div>
+
+        <div class="card" onclick="openModal('cit4')">
+            <h3 class="card-title"><i>« L’élève n’est pas un vase que l’on remplit, mais un feu que l’on allume. »</i></h3>
+        </div>
+
+    </div>
+</section>
+
+<!-- MODALS CITATIONS -->
+<div id="cit1" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('cit1')">&times;</span>
+        <p><i>« L’éducation est l’arme la plus puissante pour changer le monde. » — Nelson Mandela</i></p>
+        <button class="like-button" data-id="cit1-like">❤️ Like</button>
+    </div>
+</div>
+
+<div id="cit2" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('cit2')">&times;</span>
+        <p><i>« Un enfant, un enseignant, un livre et un stylo peuvent changer le monde. » — Malala Yousafzai</i></p>
+        <button class="like-button" data-id="cit2-like">❤️ Like</button>
+    </div>
+</div>
+
+<div id="cit3" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('cit3')">&times;</span>
+        <p><i>« Apprendre, c’est déposer de l’or dans la banque de son esprit. » — Proverbe chinois</i></p>
+        <button class="like-button" data-id="cit3-like">❤️ Like</button>
+    </div>
+</div>
+
+<div id="cit4" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('cit4')">&times;</span>
+        <p><i>« L’élève n’est pas un vase que l’on remplit, mais un feu que l’on allume. » — Montaigne</i></p>
+        <button class="like-button" data-id="cit4-like">❤️ Like</button>
+    </div>
+</div>
+
+<!-- IMAGES -->
+<section id="section-images" class="section">
+    <h2 class="section-title">Images pédagogiques</h2>
+
+    <div class="grid">
+        <div class="card img-card">
+            <img src="https://img.le-dictionnaire.com/classe-ecole.jpg" alt="Classe d'école">
+        </div>
+
+        <div class="card img-card">
+            <img src="https://www.septcollines.com/wp-content/uploads/2023/05/enseignant-comment-encourager-vos-eleves-a-progresser.jpg" alt="Enseignant encourageant un élève">
+        </div>
+    </div>
+</section>
+
+<!-- LIEN -->
+<section id="section-lien" class="section">
+    <h2 class="section-title">Lien utile</h2>
+
+    <div class="card lien-card">
+        <a href="https://www.devenirenseignant.gouv.fr" target="_blank">
+            Être professeur des écoles | devenirenseignant.gouv.fr
+        </a>
+        <p>
+            Ce site officiel présente en détail les parcours de formation, les modalités de concours, les missions du professeur des écoles, 
+            les perspectives d’évolution, les rémunérations ainsi que les dispositifs d’accompagnement proposés tout au long de la carrière. 
+            Il constitue une référence fiable pour toute personne souhaitant s’informer sur le métier et ses exigences.
+        </p>
+    </div>
+</section>
+
+<!-- QUIZ PAGE INTERNE -->
+<section id="quiz-page" class="quiz-hidden">
+    <h2 class="section-title">Quiz pédagogique</h2>
+    <div id="quiz-container"></div>
+    <button onclick="returnToHome()" class="return-btn">Retour</button>
+</section>
+
+<!-- DISCUSSION -->
+<section id="section-discussion" class="section">
+    <h2 class="section-title">Espace d’échange</h2>
+    <p class="discussion-desc">
+        Cet espace permet à tous les utilisateurs du site de poser des questions, de partager des idées ou 
+        de réagir aux contenus proposés. Chaque message contribue à enrichir la communauté pédagogique.
+    </p>
+
+    <form id="discussion-form">
+        <input type="text" id="pseudo" placeholder="Pseudo ou e-mail" required>
+        <textarea id="message" placeholder="Votre message..." required></textarea>
+        <button type="submit">Envoyer</button>
+    </form>
+
+    <div id="messages"></div>
+</section>
+
+<!-- A PROPOS -->
+<section id="section-apropos" class="apropos">
+    <h2 class="section-title">À propos</h2>
+    <p>
+        Ce site a été conçu pour encourager le partage d’idées, d’expériences et de ressources pédagogiques. 
+        Il s’adresse aux enseignants, aux futurs professeurs, aux éducateurs et à toute personne passionnée par 
+        l’apprentissage. Ici, chacun peut apprendre, échanger et contribuer.
+    </p>
+</section>
+
+</body>
+</html>
